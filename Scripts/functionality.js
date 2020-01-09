@@ -118,5 +118,48 @@ function addVideo()
 
 
 
-//GRAVITYYYYYYYY
+function gameEnded()
+{
+    document.innerHTML = "";
+    var video = document.createElement("video");
+    video.width="500";
+    video.height="350"; 
+    video.id = "video";
+    video.style.position = "relative";
+    video.autoplay = "autoplay";
+    video.controls = "controls";
+    video.src = "Videos/touchy_cropped.mp4";
+    video.type = "video/mp4";
+    video.loop = "loop";
+    video.style.zIndex = "9";
+    document.body.appendChild(video);
+
+}
+
+
+
+
+
+
+
+// function startGame(level)
+// {
+//     var p = getElementById("level");
+//     switch (p.innerHTML){
+//         case "Level 1":
+//             level1();
+//             // window.level++;
+//             break;
+//         case "Level 2":
+//             level2();
+//             break;
+//         case 3:
+//             level3();
+//             window.level++;
+//             break;
+//         case 4:
+//             gameEnded();
+//             break
+//     }
+// }
 

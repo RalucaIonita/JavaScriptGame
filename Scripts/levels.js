@@ -1,6 +1,12 @@
 
 function level1()
 {
+
+	var p = document.createElement(p);
+	p.innerHTML = "Level 1";
+	p.id = "level";
+	document.body.appendChild(p);
+
 	addAudio();
 	document.body.style.backgroundColor = "red";
 	changeBackground();
@@ -9,9 +15,9 @@ function level1()
 	divs.push(createDiv(25, 2, "red", 75, 35));
 	divs.push(createDiv(45, 2, "black", 45, 55));
 	divs.push(createDiv(65, 2, "red", 95, 0)); //the star is here
-	div[0].id = "character-div";
+	divs[0].id = "character-div";
 	divs[divs.length - 1].id = "star-div";
-	putStar(90, 2);
+	putStar(90, 10);
 	putCharacter(20, 2);
 	hideStar();
 	moveCharacter(character);
@@ -20,6 +26,10 @@ function level1()
 
 function level2()
 {
+	var p = document.createElement(p);
+	p.innerHTML = "Level 2";
+	p.id = "level";
+	document.body.appendChild(p);
 	addAudio();
 	document.body.style.backgroundColor = "black";
 	changeBackground();
@@ -35,11 +45,17 @@ function level2()
 	hideStar();
 	checkDivColor();
 	moveCharacter(character);
+	// return 2;
 }
 
 
 function level3()
 {
+
+	var p = document.createElement(p);
+	p.innerHTML = "Level 3";
+	p.id = "level";
+	document.body.appendChild(p);
 	addAudio();
 	document.body.style.backgroundColor = "black";
 	changeBackground();
@@ -53,7 +69,8 @@ function level3()
 	divs[divs.length - 1].id = "star-div";
 	divs[0].id = "character-div";
 	putCharacter(10, 25);
-	putStar(90, 20);
+	putStar(90, 22);
 	moveCharacter(character);
-	
+
+	// return 3;
 }

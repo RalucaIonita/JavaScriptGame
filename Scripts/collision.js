@@ -27,7 +27,7 @@ function stepsCollision(currentPlatform)
 		{
 			var intervalLeft = parseInt(currentPlatform.style.left);
 			var intervalRight = parseInt(currentPlatform.style.left) + parseInt(currentPlatform.style.width);
-			if(parseInt(character.style.left) <= intervalLeft - 1 || parseInt(character.style.left) >= intervalRight + 1)
+			if(parseInt(character.style.left) <= intervalLeft || parseInt(character.style.left) >= intervalRight)
 				characterFall();
 		}
 		else
@@ -57,6 +57,8 @@ function gravity()
 			else
 					{
 						alert("You died.");
+						var p = document.getElementById("level");
+						if
 						return;
 					}
 

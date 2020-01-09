@@ -20,18 +20,24 @@ function checkCollectedStar()
     character = document.getElementById("character");
     star = document.getElementById("star");
 
-    // console.log(star.style.top);
-    // console.log(character.style.top);
-
     if(parseInt(character.style.left) + 5 == parseInt(star.style.left) && parseInt(character.style.top) == parseInt(star.style.top))
     {
+
         alert("You won.");
-
-        var button = document.createElement("button");
-        button.innerHTML = "Next level";
-        document.body.appendChild("button");
-
-        //eventlistener for click
+        var p = document.getElementById("level");
+        document.body.innerHTML = "";
+        if(p.innerHTML === "Level 1")
+        {
+            document.body.innerHTML = "";
+            level2();
+        }
+        else {
+            if(p.innerHTML === "Level 3")
+            {
+                document.body.innerHTML = "";
+                gameEnded();
+            }
+        }
     }
 
 }

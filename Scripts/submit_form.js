@@ -40,6 +40,7 @@ function createForm()
 
 	var password_field = document.createElement("input");
 	password_field.type = "password";
+	password_field.id = "password";
 	password_field.placeholder = "Enter password";
 	form.appendChild(password_field);
 
@@ -144,14 +145,23 @@ function createForm()
 
 	var submit = document.createElement("button");
 	submit.innerHTML = "Submit";
+	submit.id = "submit";
+	submit.type = "button";
 	form.appendChild(submit);
 
 	var br = document.createElement("br");
 	form.appendChild(br);
-	
+
+}
 
 
-
+function checkSubmit(flickeringBackground)
+{
+	// var submit = document.getElmentById("submit");
+	// submit.addEventListener("click", function(event)
+	// {
+	// 	clearInterval(flickeringBackground);
+	// });
 }
 
 
