@@ -13,17 +13,17 @@ function setHomePage()
     "#B8B8B8", "#BEBEBE", "#C0C0C0", "#C8C8C8", "#D0D0D0", "#D3D3D3",
     "#D8D8D8", "#DCDCDC", "#E0E0E0", "#E8E8E8", "#F0F0F0", "#F5F5F5",
     "#F8F8F8", "#FFFFFF"];
-    someNumber = parseInt(randomGenerator(8, 1000));
+    someNumber = parseInt(randomGenerator(200, 500));
     while(isNaN(someNumber))
     {
-    	someNumber = parseInt(randomGenerator(8, 25));
+    	someNumber = parseInt(randomGenerator(200, 500));
     }
     console.log(someNumber);
     
     for(i = 0; i <= someNumber; i++)
     {
-    	putCharacter(randomGenerator(0, 90), randomGenerator(30, 65));
-	    putStar(randomGenerator(0, 90), randomGenerator(30, 70));
+    	putCharacter(randomGenerator(0, 155), randomGenerator(0, 125));
+	    putStar(randomGenerator(0, 155), randomGenerator(0, 125));
     }
 
     setInterval(function()

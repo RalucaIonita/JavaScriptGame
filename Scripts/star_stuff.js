@@ -23,9 +23,15 @@ function checkCollectedStar()
     // console.log(star.style.top);
     // console.log(character.style.top);
 
-    if(parseInt(character.style.left) == parseInt(star.style.left) && parseInt(character.style.top) == parseInt(star.style.top))
+    if(parseInt(character.style.left) + 5 == parseInt(star.style.left) && parseInt(character.style.top) == parseInt(star.style.top))
     {
         alert("You won.");
+
+        var button = document.createElement("button");
+        button.innerHTML = "Next level";
+        document.body.appendChild("button");
+
+        //eventlistener for click
     }
 
 }
@@ -38,17 +44,10 @@ function hideStar()
     var backgroundColor = document.body.style.backgroundColor;
 
     var star = document.getElementById("star");
-    if (starDivColor === backgroundColor)
-       {
-            if(star.style.display === "none")
-            {
-                star.style.display= "block";
-            }
-            else
-            {
-                star.style.display = "none";
-            }
-       }
+    if (starDivColor === backgroundColor && star.style.display != 'none')
+            star.style.display= "none";
+    else
+            star.style.display = "block";
 }
 
 

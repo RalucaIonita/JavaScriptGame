@@ -138,6 +138,17 @@ function createForm()
 	form.appendChild(range);
 
 
+	//submit button
+	var br = document.createElement("br");
+	form.appendChild(br);
+
+	var submit = document.createElement("button");
+	submit.innerHTML = "Submit";
+	form.appendChild(submit);
+
+	var br = document.createElement("br");
+	form.appendChild(br);
+	
 
 
 

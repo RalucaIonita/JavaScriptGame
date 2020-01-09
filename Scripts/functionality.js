@@ -17,6 +17,17 @@ function createDiv(width, height, color, top, left)
 
 
 
+function checkDivColor()
+{
+    var characterDiv = document.getElementById("character-div");
+    var backgroundColor = document.body.backgroundColor;
+    if(backgroundColor == characterDiv.style.backgroundColor)
+        return 1;
+    else
+        return 0;
+}
+
+
 
 function leftArrowPressed()
 {
@@ -58,6 +69,7 @@ function changeBackground()
     document.addEventListener("keydown", function(event) {
         if(event.keyCode == 32)
         {
+            checkDivColor();
             if(document.body.style.backgroundColor === "red")
                 document.body.style.backgroundColor = "black";
             else
@@ -77,8 +89,8 @@ function changeBackground()
 
 function addAudio()
 {
-    var sound = document.createElement('audio');
-    sound.id = 'audio';
+    var sound = document.createElement("audio");
+    sound.id = "audio";
     sound.style.display = "none";
     sound.autoplay = "autoplay";
     sound.controls = 'controls';
@@ -88,7 +100,21 @@ function addAudio()
     document.body.appendChild(sound);
 }
 
-
+function addVideo()
+{
+    var video = document.createElement("video");
+    video.width="320";
+    video.height="240"; 
+    video.id = "video";
+    video.style.position = "relative";
+    video.autoplay = "autoplay";
+    video.controls = "controls";
+    video.src = "Videos/video_cropped.mp4";
+    video.type = "video/mp4";
+    video.loop = "loop";
+    video.style.zIndex = "9";
+    document.body.appendChild(video);
+}
 
 
 

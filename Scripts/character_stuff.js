@@ -15,29 +15,40 @@ function putCharacter(top, left)
 
 
 
+
+
+
 function moveCharacter(character)
 {
 	document.addEventListener("keydown", function(event) {
-		stepsCollision();
 	// starCollision();
 	checkCollectedStar();
-	console.log(character.style.top);
+	//console.log(character.style.top);
 
-	 switch (event.keyCode) {
+	switch (event.keyCode) {
 	 	case 37:
           	leftArrowPressed();
+          	gravity();
            	break;
         case 39:
            	rightArrowPressed();
+           	gravity();
            	break;
-        case 38:
-           	upArrowPressed();
-           	break;
-        // case 40:
-        //    	downArrowPressed();
+        // case 38:
+        // 	console.log(hitYourHead());
+        //    	upArrowPressed();
         //    	break;
     }
 
 	});
 }
+
+
+
+function characterFall()
+{
+	var character = document.getElementById("character");
+	character.style.top = (parseInt(character.style.top) + 2).toString() + "vh";
+}
+
 
