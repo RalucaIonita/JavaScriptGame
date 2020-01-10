@@ -20,26 +20,28 @@ function checkCollectedStar()
     character = document.getElementById("character");
     star = document.getElementById("star");
 
-    if(parseInt(character.style.left) + 5 == parseInt(star.style.left) && parseInt(character.style.top) == parseInt(star.style.top))
+    if(parseInt(character.style.left) == parseInt(star.style.left) && parseInt(character.style.top) == parseInt(star.style.top))
     {
 
         alert("You won.");
         var p = document.getElementById("level");
-        document.body.innerHTML = "";
-        if(p.innerHTML === "Level 1")
-        {
-            document.body.innerHTML = "";
-            level2();
-        }
-        else {
-            if(p.innerHTML === "Level 3")
-            {
+        var level = p.innerHTML;
+        // la primul case e problema
+        switch(level) {
+            case "Level 1":
                 document.body.innerHTML = "";
-                gameEnded();
-            }
+                document.body = level2();
+                break;
+            case "Level 2":
+                document.body.innerHTML = "";
+                document.body = level3();
+                break;
+            case "Level 3":
+                document.body.innerHTML = "";
+                document.body = gameEnded();
+                break;
         }
     }
-
 }
 
 
@@ -55,25 +57,3 @@ function hideStar()
     else
             star.style.display = "block";
 }
-
-
-// function starCollision() //get back to this shit
-// {
-//     var star = document.getElementById("star");
-//     var heightStartPoint = parseInt(star.style.top) * 6.5; 
-//     var widthStartPoint = parseInt(star.style.left) * 5.81;
-//     var starHeight = parseInt(star.style.height);
-//     var starWidth = parseInt(star.style.width);
-    
-//     var starHeightRange = [heightStartPoint, heightStartPoint + starHeight];
-//     var starWidthRange = [widthStartPoint, widthStartPoint + starWidth];
-
-
-//     console.log(starHeightRange);
-//     console.log(starWidthRange);
-//     for( i = 0; i < parseInt(star); i++)
-//     {
-
-//     }
-
-//}

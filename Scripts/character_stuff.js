@@ -21,9 +21,7 @@ function putCharacter(top, left)
 function moveCharacter(character)
 {
 	document.addEventListener("keydown", function(event) {
-	// starCollision();
 	checkCollectedStar();
-	//console.log(character.style.top);
 
 	switch (event.keyCode) {
 	 	case 37:

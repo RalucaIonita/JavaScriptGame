@@ -47,7 +47,7 @@ function createForm()
 
 	//select
 	var ps = document.createElement("p");
-	ps.innerHTML = "Select the level:";
+	ps.innerHTML = "Select stuff:";
 	form.appendChild(ps);
 
 	var select_field = document.createElement("select");

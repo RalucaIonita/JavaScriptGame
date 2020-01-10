@@ -16,6 +16,10 @@ submit.addEventListener("click", function(event)
 	if(validatePassword())
 		{
 			document.body.innerHTML = "";
-			level1();
+			document.body = level1();
 		};
 });
+
+// gameEnded();
+
+// level2();

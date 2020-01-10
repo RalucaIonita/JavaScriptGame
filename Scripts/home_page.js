@@ -26,10 +26,6 @@ function setHomePage()
 	    putStar(randomGenerator(0, 155), randomGenerator(0, 125));
     }
 
-  //   setInterval(function()
-		// {
-		// 	document.body.style.backgroundColor = colors[randomGenerator(0, 36)];
-		// }, 500);
 
    return colors;
 

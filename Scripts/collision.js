@@ -8,7 +8,7 @@ function calculateCurrentPlatform()
 	for(var i = 0; i < platforms.length; i++)
 	{
 		var currentDistance = parseInt(platforms[i].style.top) - parseInt(character.style.top);
-		console.log("CurrentDistantce: " + currentDistance);
+		//console.log("CurrentDistantce: " + currentDistance);
 		if (currentDistance == 5 && currentDistance > 0)
 		{
 			minDistancePlatform = platforms[i];
@@ -39,7 +39,7 @@ function gravity()
 	var character = document.getElementById("character");
 	console.log(character.style.top);
 	// characterFall();
-	console.log("*");
+	//console.log("*");
 	var currentPlatform = calculateCurrentPlatform();
 	console.log(currentPlatform);
 	if(currentPlatform != -1)
@@ -57,8 +57,7 @@ function gravity()
 			else
 					{
 						alert("You died.");
-						var p = document.getElementById("level");
-						if
+						lostGame();
 						return;
 					}
 

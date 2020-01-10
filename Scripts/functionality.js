@@ -69,7 +69,9 @@ function changeBackground()
     document.addEventListener("keydown", function(event) {
         if(event.keyCode == 32)
         {
-            checkDivColor();
+            // document.body.style.backgroundColor = "";
+            console.log("jhsdbcfk");
+           // checkDivColor();
             if(document.body.style.backgroundColor === "red")
                 document.body.style.backgroundColor = "black";
             else
@@ -120,7 +122,7 @@ function addVideo()
 
 function gameEnded()
 {
-    document.innerHTML = "";
+   // document.innerHTML = "";
     var video = document.createElement("video");
     video.width="500";
     video.height="350"; 
@@ -132,34 +134,36 @@ function gameEnded()
     video.type = "video/mp4";
     video.loop = "loop";
     video.style.zIndex = "9";
+    video.style.textAlign = "center";
     document.body.appendChild(video);
+
+    var h1 = document.createElement("h1");
+    h1.innerHTML = "Yeeeeeey! You won!";
+    h1.style.color = "white";
+    h1.style.textAlign = "center";
+    document.body.appendChild(h1);
+
+    return document.body;
+}
+
+
+
+function lostGame()
+{
+    document.body.innerHTML = "";
+
+
+    var h1 = document.createElement("h1");
+    h1.innerHTML = "You died. Ups.";
+    h1.style.color = "white";
+    h1.style.textAlign = "center";
+    document.body.appendChild(h1);
+
+
 
 }
 
 
 
 
-
-
-
-// function startGame(level)
-// {
-//     var p = getElementById("level");
-//     switch (p.innerHTML){
-//         case "Level 1":
-//             level1();
-//             // window.level++;
-//             break;
-//         case "Level 2":
-//             level2();
-//             break;
-//         case 3:
-//             level3();
-//             window.level++;
-//             break;
-//         case 4:
-//             gameEnded();
-//             break
-//     }
-// }
 
